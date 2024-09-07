@@ -32,11 +32,11 @@ const Navbar = () => {
 	};
 
 	return (
-		<header className=" flex flex-col text-sm  flex-1 w-full items-center">
-			<section className="flex p-2 w-full h-12 bg-primaryWhite">
+		<header className=" flex flex-col text-sm  flex-1 w-full items-center border border-b border-gray-400 border-opacity-25">
+			<section className="flex p-2 w-full h-12 bg-primaryWhite text-primaryDarkText">
 				<section className="flex w-1/4 flex-row gap-2 items-center">
 					<Image src={logo} alt="logo" className="h-8 w-8" />
-					<p className="text-md text-primary underline underline-offset-2 decoration-[#D39032]">
+					<p className="text-md  underline underline-offset-2 decoration-[#D39032]">
 						Beauty Boutique.
 					</p>
 				</section>
@@ -50,12 +50,12 @@ const Navbar = () => {
 							<span
 								className={`${
 									isOpen ? "-rotate-45 -translate-y-1  " : ""
-								} transition-transform duration-700 absolute top-1 right-1 h-1 border-b  w-6 border-black`}
+								} transition-transform duration-700 absolute top-1 right-1 h-1 border-b  w-6 border-borderColorDark`}
 							></span>
 							<span
 								className={`${
 									isOpen ? "rotate-45 translate-x-1 translate-y-1 " : ""
-								} transition-transform duration-700 absolute -top-1 right-1 h-1 border-b  w-6 border-black`}
+								} transition-transform duration-700 absolute -top-1 right-1 h-1 border-b  w-6 border-borderColorDark `}
 							></span>
 						</div>
 

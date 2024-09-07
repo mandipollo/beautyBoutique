@@ -1,12 +1,27 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import "./globals.css";
-import Image from "next/image";
-import mainImage from "@/assets/pexels-tillhub-6925914.jpg";
+import Hero from "@/components/home/Hero";
+import Intro from "@/components/home/Intro";
+import Lenis from "lenis";
+import Description from "@/components/home/Description";
 
 const page = () => {
+	useEffect(() => {
+		const lenis = new Lenis();
+
+		function raf(time: number) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+		requestAnimationFrame(raf);
+	}, []);
 	return (
-		<main className="h-full w-full flex-col flex flex-1">
-			<Image loading="lazy" alt="image" src={mainImage} />
+		<main className="h-full w-full flex-col flex  gap-20 ">
+			<Intro />
+			<Description />
+
+			<Hero />
 		</main>
 	);
 };

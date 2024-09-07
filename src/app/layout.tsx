@@ -9,8 +9,8 @@ export const metadata = {
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
 	return (
 		<html lang="en">
-			<body className="bg-primary relative flex flex-col ">
-				<header className="fixed top-0 left-0 right-0 z-10">
+			<body className="bg-primaryWhite relative flex flex-col font-manrope font-extralight text-primaryDarkText ">
+				<header className="fixed top-0 left-0 right-0 z-40">
 					<Navbar />
 				</header>
 
