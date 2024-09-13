@@ -1,33 +1,40 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import introImg from "@/assets/intro-high-res.jpg";
 
 import { useScroll, useTransform, motion } from "framer-motion";
+import Button from "../Button";
 
 const Intro = () => {
-	const container = useRef(null);
+	const container = useRef<HTMLDivElement | null>(null);
 	const { scrollYProgress } = useScroll({
 		target: container,
 		offset: ["start start", "end start"],
 	});
 
-	const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
+	const y = useTransform(scrollYProgress, [0, 1], ["0%", "95%"]);
 	return (
-		<section className="h-screen flex justify-center items-center relative w-screen overflow-hidden">
-			<h1 className="absolute top-10 left-10 z-10 text-8xl text-white">
-				SUN KISSED
-			</h1>
+		<section className=" flex justify-start items-center relative w-screen overflow-hidden">
+			<div className="flex flex-col gap-4 absolute z-10 md:left-20 left-10 md:top-20 top-10 ">
+				<h1 className="md:text-8xl text-4xl">Beauty Boutique.</h1>
+				<p className="flex w-60 ">
+					We offer a full range of skincare products.
+				</p>
+				<Button borderVisible={true} text="EXPLORE PRODUCTS" />
+			</div>
 			<motion.div
+				ref={container}
 				style={{ y: y }}
-				className="flex min-h-screen w-screen relative "
+				className="flex h-full bg-gray-400  w-screen relative "
 			>
-				<Image
-					src={introImg}
-					objectFit="cover"
-					fill
-					alt="lotion showcase"
-				></Image>
+				<video
+					className=" w-full h-full object-cover"
+					src="/videos/sunscreen-beach.mp4"
+					typeof="video/mp4"
+					autoPlay
+					loop
+					muted
+				></video>
 			</motion.div>
 		</section>
 	);

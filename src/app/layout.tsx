@@ -1,22 +1,28 @@
+import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import { FC } from "react";
+import { Metadata } from "next";
+import "@/app/globals.css";
+import StoreProvider from "@/store/StoreProvider";
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: "Beauty ",
 	description: "Your one stop beauty center!",
 };
 
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
 	return (
-		<html lang="en">
-			<body className="bg-primaryWhite relative flex flex-col font-manrope font-extralight text-primaryDarkText ">
-				<header className="fixed top-0 left-0 right-0 z-40">
+		<StoreProvider>
+			<html lang="en">
+				<body className=" relative flex flex-col font-manrope font-extralight text-primaryDarkText ">
 					<Navbar />
-				</header>
-
-				<main className="flex flex-1 mt-12"> {children}</main>
-			</body>
-		</html>
+					<main className="flex-grow pt-12"> {children}</main>
+					<footer>
+						<Footer />
+					</footer>
+				</body>
+			</html>
+		</StoreProvider>
 	);
 };
 

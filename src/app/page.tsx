@@ -1,10 +1,12 @@
 "use client";
+
 import React, { useEffect } from "react";
 import "./globals.css";
-import Hero from "@/components/home/Hero";
 import Intro from "@/components/home/Intro";
 import Lenis from "lenis";
 import Description from "@/components/home/Description";
+import Products from "@/components/home/Products";
+import About from "@/components/home/About";
 
 const page = () => {
 	useEffect(() => {
@@ -20,8 +22,8 @@ const page = () => {
 		<main className="h-full w-full flex-col flex  gap-20 ">
 			<Intro />
 			<Description />
-
-			<Hero />
+			<Products />
+			<About />
 		</main>
 	);
 };

@@ -1,7 +1,7 @@
+"use client";
 import React, { FC } from "react";
-
 import { motion } from "framer-motion";
-
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Overlay from "./Overlay";
 
@@ -9,12 +9,14 @@ const Nav: FC<{ handleOpen: () => void; isOpen: boolean }> = ({
 	handleOpen,
 	isOpen,
 }) => {
+	const pathname = usePathname();
+
 	// links
 
 	const links = [
 		{ href: "/", link: "HOME" },
-		{ href: "/treatment", link: "TREATMENTS" },
-		{ href: "/products", link: "PRODUCTS" },
+
+		{ href: "/shop", link: "SHOP" },
 		{
 			href: "/contact",
 			link: "CONTACT",
@@ -54,6 +56,7 @@ const Nav: FC<{ handleOpen: () => void; isOpen: boolean }> = ({
 				delay: 0.2,
 			},
 		},
+		exit: { opacity: 0, transition: { duration: 0.3 } },
 	};
 
 	return (
@@ -68,7 +71,7 @@ const Nav: FC<{ handleOpen: () => void; isOpen: boolean }> = ({
 				variants={container}
 				initial="hidden"
 				animate="show"
-				className="flex w-full md:flex-row flex-col h-1/3 bg-primaryWhite "
+				className="flex w-full md:flex-row flex-col h-1/3 bg-white "
 			>
 				<nav className="flex p-2 md:w-1/2 w-full  md:justify-center md:items-center ">
 					<ul className="flex w-full flex-wrap flex-row gap-4 text-primary">
@@ -84,7 +87,7 @@ const Nav: FC<{ handleOpen: () => void; isOpen: boolean }> = ({
 									href={link.href}
 									className="xl:text-6xl lg:text-4xl md:text-2xl text-xl font-extralight"
 								>
-									{link.link}
+									{pathname === link.href ? <em>{link.link}</em> : link.link}
 									<span className={spanClass}></span>
 								</Link>
 							</motion.li>

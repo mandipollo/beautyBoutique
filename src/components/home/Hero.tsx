@@ -1,10 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import productImage from "@/assets/pexels-madalina-enache-1540051428-27357176 (1).jpg";
-import sideImage from "@/assets/avocado.jpg";
-import sunSvg from "@/assets/sun-svgrepo-com (1).svg";
-import playSvg from "@/assets/play-circle-svgrepo-com.svg";
-import leafSvg from "@/assets/leaf-svgrepo-com.svg";
 
 const Hero = () => {
 	return (
@@ -18,21 +13,28 @@ const Hero = () => {
 						<button className="flex space-x-2 justify-center items-center p-2 w-52 h-10 rounded-2xl bg-sunny text-white">
 							<p>Start Shopping</p>
 							<Image
+								loading="lazy"
 								className="hover:translate-x-2 duration-300"
-								src={leafSvg}
+								src="/svg/leaf.svg"
 								width={20}
 								height={20}
 								alt="leaf"
 							/>
 						</button>
 						<button className="">
-							<Image src={playSvg} alt="play demo" className="h-12 w-12" />
+							<Image
+								loading="lazy"
+								src="/svg/play.svg"
+								alt="play demo"
+								className="h-12 w-12"
+							/>
 						</button>
 						See Demo
 					</div>
 				</div>
 				<div className="flex h-full  relative">
 					<Image
+						className="object-cover"
 						loading="lazy"
 						width={350}
 						alt="image"
@@ -40,7 +42,7 @@ const Hero = () => {
                 (max-width: 768px) 300, 
                 (max-width: 1024px) 350  
                 "
-						src={productImage}
+						src="/images/garnier"
 					/>
 				</div>
 			</article>
@@ -50,16 +52,17 @@ const Hero = () => {
 						Skincare by beauty
 					</button>
 					<Image
+						className="object-cover"
 						width={200}
 						height={200}
 						loading="lazy"
 						alt="image"
-						src={sideImage}
+						src="/images/avocado.jpg"
 					/>
 				</div>
 
 				<div className="flex w-1/2 h-full flex-col space-y-10  items-center justify-center gap-2">
-					<Image src={sunSvg} alt="sun svg" height={100} />
+					<Image loading="lazy" src="/svg/sun.svg" alt="sun svg" height={100} />
 					<h4>
 						Natural skincare <br></br> is the best choice <br></br> for skin
 					</h4>

@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import logo from "@/assets/sun-svgrepo-com.svg";
-import account from "@/assets/account-customize-man-svgrepo-com.svg";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./Nav";
@@ -32,16 +30,23 @@ const Navbar = () => {
 	};
 
 	return (
-		<header className=" flex flex-col text-sm  flex-1 w-full items-center border border-b border-gray-400 border-opacity-25">
-			<section className="flex p-2 w-full h-12 bg-primaryWhite text-primaryDarkText">
+		<header className="  fixed top-0 left-0 right-0 z-40 flex flex-col text-sm  flex-1 w-full items-center border border-b border-gray-400 border-opacity-25">
+			<section className="bg-white flex p-2 w-full h-12  text-primaryDarkText">
 				<section className="flex w-1/4 flex-row gap-2 items-center">
-					<Image src={logo} alt="logo" className="h-8 w-8" />
+					<Image
+						loading="lazy"
+						src="/svg/logo.svg"
+						width={10}
+						height={10}
+						alt="logo"
+						className="h-8 w-8 "
+					/>
 					<p className="text-md  underline underline-offset-2 decoration-[#D39032]">
 						Beauty Boutique.
 					</p>
 				</section>
 
-				<section className="flex w-1/2 justify-center items-center flex-1">
+				<section className=" flex w-1/2 justify-center items-center flex-1">
 					<button
 						onClick={handleOpen}
 						className="flex  justify-center items-center gap-2"
@@ -50,12 +55,12 @@ const Navbar = () => {
 							<span
 								className={`${
 									isOpen ? "-rotate-45 -translate-y-1  " : ""
-								} transition-transform duration-700 absolute top-1 right-1 h-1 border-b  w-6 border-borderColorDark`}
+								} transition-transform duration-700 absolute top-[2px] right-1 h-1 border-b  w-6 border-borderColorDark`}
 							></span>
 							<span
 								className={`${
 									isOpen ? "rotate-45 translate-x-1 translate-y-1 " : ""
-								} transition-transform duration-700 absolute -top-1 right-1 h-1 border-b  w-6 border-borderColorDark `}
+								} transition-transform duration-700 absolute -top-[6px] right-1 h-1 border-b  w-6 border-borderColorDark `}
 							></span>
 						</div>
 
@@ -84,7 +89,6 @@ const Navbar = () => {
 					className="flex items-center gap-2 justify-end w-1/4"
 				>
 					<p className="font-extralight">SHOP</p>
-					<Image src={account} alt="account svg" className="h-8 w-8" />
 				</motion.section>
 			</section>
 

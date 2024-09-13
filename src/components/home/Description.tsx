@@ -1,7 +1,7 @@
+"use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import avocadoimg from "@/assets/avocado.jpg";
-import orangeImg from "@/assets/oranges.jpg";
+
 import { useScroll, useTransform, motion } from "framer-motion";
 
 const Description = () => {
@@ -14,7 +14,9 @@ const Description = () => {
 		offset: ["start start", "end start"],
 	});
 
-	const avY = useTransform(avocadoY, [0, 1], ["0vh", "50vh"]);
+	const avY = useTransform(avocadoY, [0, 1], ["0vh", "-30vh"]);
+
+	//
 	const orangeContainer = useRef(null);
 
 	const { scrollYProgress } = useScroll({
@@ -22,26 +24,55 @@ const Description = () => {
 		offset: ["start start", "end start"],
 	});
 
-	const y = useTransform(scrollYProgress, [0, 1], ["0vh", "80vh"]);
+	const y = useTransform(scrollYProgress, [0, 1], ["0vh", "-25vh"]);
+
 	return (
-		<section className="flex h-screen flex-row px-10">
-			<div className="flex w-2/5 h-full relative justify-center ">
-				<motion.div style={{ y: avY }} className="relative h-60 w-60">
-					<Image src={avocadoimg} objectFit="contain" alt="avocado" fill />
+		<section className="flex md:flex-row gap-2 flex-col px-10">
+			<div className="md:flex hidden md:w-2/5 h-full relative justify-center ">
+				<motion.div
+					ref={avocadoContainer}
+					style={{ y: avY }}
+					className="absolute left-0  h-80 w-60"
+				>
+					<Image
+						loading="lazy"
+						src="/images/avocado.jpg"
+						className="object-cover"
+						alt="avocado"
+						fill
+					/>
 				</motion.div>
-				<motion.div style={{ y: y }} className="relative h-40 w-40">
-					<Image src={orangeImg} objectFit="contain" alt="avocado" fill />
+				<motion.div
+					ref={orangeContainer}
+					style={{ y: y }}
+					className=" absolute right-10 h-60 w-60 z-10"
+				>
+					<Image
+						loading="lazy"
+						src="/images/oranges.jpg"
+						className="object-cover"
+						alt="oranges"
+						fill
+					/>
 				</motion.div>
 			</div>
-			<article className="flex gap-6 flex-col w-3/5 text-primaryDarkText">
+			<article className="flex gap-6 flex-col md:w-3/5 text-primaryDarkText">
 				<h2 className="tracking-widest text-3xl ">
-					WELCOME TO OUR FURNITURE SHOP, WHERE TIMELESS AND STYLISH DESIGNS MEET
-					STORYTELLING.
+					Glow Like Never Before! Discover your best skin yet with our
+					all-natural, dermatologist-approved skincare line.
 				</h2>
 				<p className="text-sm w-60">
-					Every piece of furniture in our collection tells a personal story.
-					Custom-designed and personalized to enhance your home's aesthetics.
+					Nourish, hydrate, and rejuvenate with ingredients your skin will love.
+					Because your skin deserves the glow!
 				</p>
+				<div className="relative w-full h-80 ">
+					<video
+						loop
+						src="/videos/sunscreen-video.mp4"
+						autoPlay
+						typeof="video/mp4"
+					></video>
+				</div>
 			</article>
 		</section>
 	);
