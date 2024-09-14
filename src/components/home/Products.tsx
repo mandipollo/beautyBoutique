@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import ProductCard from "./ProductCard";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Button from "../Button";
+import Link from "next/link";
 const Products = () => {
 	const cards = [
 		{
@@ -54,7 +55,9 @@ const Products = () => {
 							and reveal glowing, healthy skin.
 						</p>
 						<div></div>
-						<Button borderVisible={true} text="View Collection" />
+						<Link href="/shop">
+							<Button text="View Collection" />
+						</Link>
 					</div>
 
 					{cards.map(card => {

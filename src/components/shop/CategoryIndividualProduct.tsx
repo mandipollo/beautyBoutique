@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ProductProps } from "../cart/DataTypes";
 const CategoryIndividualProduct: FC<{
-	product: { id: number; title: string; image: string; price: number };
+	product: ProductProps;
 }> = ({ product }) => {
 	return (
 		<li key={product.id} className="flex flex-col space-y-4 h-96 text-sm">
@@ -15,6 +16,7 @@ const CategoryIndividualProduct: FC<{
 					className=" grid h-full w-60  relative bg-primary"
 				>
 					<Image
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 						loading="lazy"
 						src={product.image}
 						alt={product.title}

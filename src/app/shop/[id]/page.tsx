@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import Button from "@/components/Button";
 import CategoryProducts from "@/components/shop/CategoryProducts";
+import AddToCartButton from "@/components/cart/AddToCartButton";
 
 export const metadata: Metadata = {
 	title: "Product",
@@ -22,6 +23,7 @@ const ProductPage: FC<{ params: { id: string } }> = ({ params }) => {
 				<div className="flex justify-center md:w-1/2">
 					<div className="flex h-96 w-96 relative  ">
 						<Image
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 							loading="lazy"
 							src={product.image}
 							alt={product.title}
@@ -47,7 +49,7 @@ const ProductPage: FC<{ params: { id: string } }> = ({ params }) => {
 					</p>
 					<p className="text-xl">£{product.price}</p>
 					<div className="w-60">
-						<Button text="ADD TO CART" borderVisible={true} />
+						<AddToCartButton product={product} />
 					</div>
 				</article>
 			</section>

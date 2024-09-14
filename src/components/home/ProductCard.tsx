@@ -30,7 +30,7 @@ const ProductCard: FC<{
 					{card.title}
 				</h2>
 
-				<Button borderVisible={true} text={`SHOP ${card.title}`}></Button>
+				<Button text={`SHOP ${card.title}`}></Button>
 			</div>
 		</div>
 	);

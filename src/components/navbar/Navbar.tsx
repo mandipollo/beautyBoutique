@@ -4,8 +4,13 @@ import React, { useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./Nav";
+import Link from "next/link";
+import { useAppSelector } from "@/store/hooks";
 
 const Navbar = () => {
+	// cart items
+
+	const cartItems = useAppSelector(state => state.cart.items);
 	// handle menu state
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -30,8 +35,8 @@ const Navbar = () => {
 	};
 
 	return (
-		<header className="  fixed top-0 left-0 right-0 z-40 flex flex-col text-sm  flex-1 w-full items-center border border-b border-gray-400 border-opacity-25">
-			<section className="bg-white flex p-2 w-full h-12  text-primaryDarkText">
+		<header className=" fixed top-0 left-0 right-0 z-40 flex flex-col text-sm  flex-1 w-full items-center border border-b border-gray-400 border-opacity-25">
+			<section className="bg-primaryWhite  flex p-2 w-full h-12  text-primaryDarkText">
 				<section className="flex w-1/4 flex-row gap-2 items-center">
 					<Image
 						loading="lazy"
@@ -41,9 +46,12 @@ const Navbar = () => {
 						alt="logo"
 						className="h-8 w-8 "
 					/>
-					<p className="text-md  underline underline-offset-2 decoration-[#D39032]">
-						Beauty Boutique.
-					</p>
+
+					<Link href="/">
+						<p className="text-md  underline underline-offset-2 decoration-[#D39032]">
+							Beauty Boutique.
+						</p>
+					</Link>
 				</section>
 
 				<section className=" flex w-1/2 justify-center items-center flex-1">
@@ -72,13 +80,15 @@ const Navbar = () => {
 							>
 								MENU
 							</motion.p>
-							<motion.p
-								className="flex absolute -top-2"
-								variants={opacity}
-								animate={isOpen ? "open" : "closed"}
-							>
-								CLOSE
-							</motion.p>
+							{isOpen && (
+								<motion.p
+									className="flex absolute -top-2"
+									variants={opacity}
+									animate={isOpen ? "open" : "closed"}
+								>
+									CLOSE
+								</motion.p>
+							)}
 						</div>
 					</button>
 				</section>
@@ -88,7 +98,23 @@ const Navbar = () => {
 					animate={isOpen ? "closed" : "open"}
 					className="flex items-center gap-2 justify-end w-1/4"
 				>
-					<p className="font-extralight">SHOP</p>
+					<Link href="/shop">
+						<p className="font-extralight">SHOP</p>
+					</Link>
+					<Link
+						href="/cart"
+						className="flex flex-row justify-center items-center"
+					>
+						<Image
+							loading="lazy"
+							src="/svg/cart.svg"
+							width={4}
+							height={4}
+							alt="logo"
+							className="h-4 w-4 "
+						/>
+						<p className="font-extralight">CART ({cartItems})</p>
+					</Link>
 				</motion.section>
 			</section>
 

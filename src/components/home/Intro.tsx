@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { useScroll, useTransform, motion } from "framer-motion";
 import Button from "../Button";
+import Link from "next/link";
 
 const Intro = () => {
 	const container = useRef<HTMLDivElement | null>(null);
@@ -20,7 +21,9 @@ const Intro = () => {
 				<p className="flex w-60 ">
 					We offer a full range of skincare products.
 				</p>
-				<Button borderVisible={true} text="EXPLORE PRODUCTS" />
+				<Link href="/shop">
+					<Button text="EXPLORE PRODUCTS" />
+				</Link>
 			</div>
 			<motion.div
 				ref={container}

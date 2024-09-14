@@ -17,13 +17,14 @@ const Nav: FC<{ handleOpen: () => void; isOpen: boolean }> = ({
 		{ href: "/", link: "HOME" },
 
 		{ href: "/shop", link: "SHOP" },
+		{ href: "/aboutUs", link: "ABOUT US" },
 		{
 			href: "/contact",
 			link: "CONTACT",
 		},
 		{
-			href: "/book",
-			link: "BOOK",
+			href: "/cart",
+			link: "CART",
 		},
 	];
 	const spanClass =
@@ -71,7 +72,7 @@ const Nav: FC<{ handleOpen: () => void; isOpen: boolean }> = ({
 				variants={container}
 				initial="hidden"
 				animate="show"
-				className="flex w-full md:flex-row flex-col h-1/3 bg-white "
+				className="flex w-full md:flex-row flex-col h-1/3 bg-primaryWhite"
 			>
 				<nav className="flex p-2 md:w-1/2 w-full  md:justify-center md:items-center ">
 					<ul className="flex w-full flex-wrap flex-row gap-4 text-primary">

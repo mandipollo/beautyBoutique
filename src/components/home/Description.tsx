@@ -35,6 +35,7 @@ const Description = () => {
 					className="absolute left-0  h-80 w-60"
 				>
 					<Image
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 						loading="lazy"
 						src="/images/avocado.jpg"
 						className="object-cover"
@@ -48,6 +49,7 @@ const Description = () => {
 					className=" absolute right-10 h-60 w-60 z-10"
 				>
 					<Image
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 						loading="lazy"
 						src="/images/oranges.jpg"
 						className="object-cover"

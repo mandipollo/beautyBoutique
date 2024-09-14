@@ -12,17 +12,17 @@ export const metadata: Metadata = {
 
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
 	return (
-		<StoreProvider>
-			<html lang="en">
-				<body className=" relative flex flex-col font-manrope font-extralight text-primaryDarkText ">
+		<html lang="en">
+			<body className=" bg-primaryWhite relative  flex flex-col font-manrope font-extralight text-primaryDarkText ">
+				<StoreProvider>
 					<Navbar />
 					<main className="flex-grow pt-12"> {children}</main>
 					<footer>
 						<Footer />
 					</footer>
-				</body>
-			</html>
-		</StoreProvider>
+				</StoreProvider>
+			</body>
+		</html>
 	);
 };
 

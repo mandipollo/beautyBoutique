@@ -26,7 +26,7 @@ const About = () => {
 					enhance your skin's natural beauty.
 				</p>
 				<div className="w-36">
-					<Button borderVisible={true} text="About Us" />
+					<Button text="About Us" />
 				</div>
 			</div>
 			<motion.div
@@ -34,6 +34,7 @@ const About = () => {
 				className="flex w-screen min-h-screen flex-1 relative m-2 "
 			>
 				<Image
+					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 					loading="lazy"
 					src="/images/beach.jpg"
 					className="object-cover"
