@@ -9,27 +9,27 @@ const Products = () => {
 		{
 			id: 1,
 			title: " SPF 50",
-			image: "/images/sunscreen.jpg",
+			image: "/images/objects/img1.jpg",
 		},
 		{
 			id: 2,
 			title: " SPF 40",
-			image: "/images/sunscreen-besoma.jpg",
+			image: "/images/objects/img2.jpg",
 		},
 		{
 			id: 3,
 			title: " Mousteriser ",
-			image: "/images/misola.jpg",
+			image: "/images/objects/img3.jpg",
 		},
 		{
 			id: 4,
 			title: "Facewash ",
-			image: "/images/cream-anua.jpg",
+			image: "/images/objects/img4.jpg",
 		},
 		{
 			id: 5,
 			title: "Garnier",
-			image: "/images/garnier.jpg",
+			image: "/images/objects/img6.jpg",
 		},
 	];
 	const targetRef = useRef<HTMLElement | null>(null);

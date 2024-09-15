@@ -15,10 +15,8 @@ const ShopFilter = () => {
 	return (
 		<header className="flex w-full h-full gap-4 flex-col">
 			<div className="flex w-full h-full items-center">
-				<h2 className="md:text-8xl sm:text-4xl xs:text-2xl">
-					{filter.toUpperCase()}
-				</h2>
-				<span className="flex md:w-20 sm:h-10 h-6 w-6  sm:w-10 md:h-20 md:text-4xl sm:text-2xl text-md rounded-full justify-center items-center border border-borderColorDark">
+				<h2 className="md:text-8xl text-4xl">{filter.toUpperCase()}</h2>
+				<span className="flex md:w-20 h-10 w-10 md:h-20 md:text-4xl text-2xl  rounded-full justify-center items-center border border-borderColorDark">
 					{filter === "all"
 						? Dummy_Data.length
 						: Dummy_Data.filter(product => product.category === filter).length}
@@ -26,7 +24,7 @@ const ShopFilter = () => {
 			</div>
 
 			<div className="grid">
-				<ul className="grid sm:flex flex-row text-sm gap-2">
+				<ul className="flex flex-wrap text-sm gap-2">
 					<li>
 						<button
 							onClick={e => handleFilter("all")}
