@@ -1,9 +1,9 @@
 import Footer from "@/components/footer/Footer";
-import Navbar from "@/components/navbar/Navbar";
 import { FC } from "react";
 import { Metadata } from "next";
 import "@/app/globals.css";
 import StoreProvider from "@/store/StoreProvider";
+import NavbarWrapper from "@/components/navbar/NavbarWrapper";
 
 export const metadata: Metadata = {
 	title: "Beauty ",
@@ -15,8 +15,8 @@ const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
 		<html lang="en">
 			<body className=" bg-primaryWhite relative  flex flex-col font-manrope font-extralight text-primaryDarkText ">
 				<StoreProvider>
-					<Navbar />
-					<main className="flex-grow pt-12"> {children}</main>
+					<NavbarWrapper />
+					<main className="flex-grow"> {children}</main>
 					<footer>
 						<Footer />
 					</footer>

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const layout: FC<{ children: React.ReactNode }> = ({ children }) => {
 	return (
-		<main className="flex flex-col w-full h-full space-y-4 ">
+		<main className="flex flex-col pt-12 w-full h-full space-y-4 ">
 			<div>{children}</div>
 		</main>
 	);

@@ -8,12 +8,12 @@ const Products = () => {
 	const cards = [
 		{
 			id: 1,
-			title: " SPF 50",
+			title: " Sunscreen",
 			image: "/images/objects/img1.jpg",
 		},
 		{
 			id: 2,
-			title: " SPF 40",
+			title: " Cream",
 			image: "/images/objects/img2.jpg",
 		},
 		{
@@ -25,11 +25,6 @@ const Products = () => {
 			id: 4,
 			title: "Facewash ",
 			image: "/images/objects/img4.jpg",
-		},
-		{
-			id: 5,
-			title: "Garnier",
-			image: "/images/objects/img6.jpg",
 		},
 	];
 	const targetRef = useRef<HTMLElement | null>(null);

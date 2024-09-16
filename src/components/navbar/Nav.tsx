@@ -17,7 +17,7 @@ const Nav: FC<{ handleOpen: () => void; isOpen: boolean }> = ({
 		{ href: "/", link: "HOME" },
 
 		{ href: "/shop", link: "SHOP" },
-		{ href: "/aboutUs", link: "ABOUT US" },
+		{ href: "/about", link: "ABOUT US" },
 		{
 			href: "/contact",
 			link: "CONTACT",

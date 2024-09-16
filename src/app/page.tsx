@@ -19,7 +19,7 @@ const page = () => {
 		requestAnimationFrame(raf);
 	}, []);
 	return (
-		<main className="h-full w-full flex-col flex  gap-20 ">
+		<main className="h-full w-full flex-col flex pt-12  gap-20">
 			<Intro />
 			<Description />
 			<Products />

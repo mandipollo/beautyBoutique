@@ -16,7 +16,7 @@ const ShopPage: FC = () => {
 		requestAnimationFrame(raf);
 	}, []);
 	return (
-		<main className="flex flex-col w-full h-full p-2 space-y-4 ">
+		<main className="flex flex-col w-full h-full p-2 space-y-4">
 			<ShopFilter />
 			<ShopContent />
 		</main>
