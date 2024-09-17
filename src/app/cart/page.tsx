@@ -19,13 +19,13 @@ const CartPage = () => {
 
 	if (cartItems.length === 0) {
 		return (
-			<main className="min-h-[calc(100vh-3rem)] flex justify-center items-center ">
+			<main className="h-screen flex justify-center items-center ">
 				<h1 className="text-2xl">Cricketsss..</h1>
 			</main>
 		);
 	}
 	return (
-		<main className="flex min-h-[calc(100vh-3rem)] flex-col w-full gap-4 justify-center items-center pt-12 p-4">
+		<main className="flex h-screen flex-col w-full gap-4 justify-center items-center pt-12 p-4">
 			<h2 className="text-4xl">ORDER SUMMARY</h2>
 			<section className="flex flex-col h-full w-full">
 				<ul className="grid md:grid-cols-2 grid-cols-1 gap-4">

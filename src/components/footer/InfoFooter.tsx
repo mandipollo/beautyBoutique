@@ -14,24 +14,10 @@ const InfoFooter = () => {
 							<LinkButton href="/" text="HOME" />
 						</li>
 						<li>
-							<LinkButton href="shop" text="SHOP" />
+							<LinkButton href="/shop" text="SHOP" />
 						</li>
 						<li>
-							<LinkButton href="aboutUs" text="ABOUT US" />
-						</li>
-					</ul>
-				</nav>
-
-				<nav>
-					<ul className="flex flex-col">
-						<li>
-							<LinkButton href="mousteriser" text="MOUSTERISE" />
-						</li>
-						<li>
-							<LinkButton href="facewash" text="FACEWASH" />
-						</li>
-						<li>
-							<LinkButton href="sunscreen" text="SUNSCREEN" />
+							<LinkButton href="/about" text="ABOUT US" />
 						</li>
 					</ul>
 				</nav>
@@ -39,13 +25,13 @@ const InfoFooter = () => {
 				<nav>
 					<ul className="flex flex-col">
 						<li>
-							<LinkButton href="contact" text="CONTACT" />
+							<LinkButton href="/contact" text="CONTACT" />
 						</li>
 						<li>
-							<LinkButton href="contact" text="PRIVACY POLICY" />
+							<LinkButton href="/contact" text="PRIVACY POLICY" />
 						</li>
 						<li>
-							<LinkButton href="contact" text="TERMS & CONDITIONS" />
+							<LinkButton href="/contact" text="TERMS & CONDITIONS" />
 						</li>
 					</ul>
 				</nav>

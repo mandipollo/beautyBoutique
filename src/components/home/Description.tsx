@@ -14,7 +14,7 @@ const Description = () => {
 		offset: ["start start", "end start"],
 	});
 
-	const avY = useTransform(avocadoY, [0, 1], ["0vh", "-30vh"]);
+	const avY = useTransform(avocadoY, [0, 1], ["20vh", "-5vh"]);
 
 	//
 	const orangeContainer = useRef(null);
@@ -24,7 +24,7 @@ const Description = () => {
 		offset: ["start start", "end start"],
 	});
 
-	const y = useTransform(scrollYProgress, [0, 1], ["0vh", "-25vh"]);
+	const y = useTransform(scrollYProgress, [0, 1], ["30vh", "-10vh"]);
 
 	return (
 		<section className="flex md:flex-row gap-2 flex-col px-10">
