@@ -24,7 +24,7 @@ const About = () => {
 				<h3 className="md:text-8xl text-4xl">2000</h3>
 				<p className="text-sm text-center">
 					we craft high-quality, natural products designed to nurture and
-					enhance your skin's natural beauty.
+					enhance your skin&apos;s natural beauty.
 				</p>
 				<Link href="/about" className="w-36">
 					<Button text="About Us" />

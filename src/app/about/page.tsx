@@ -22,9 +22,9 @@ const About = () => {
 						height={20}
 					/>
 				</Link>
-				<article className="sticky p-10 top-1/2 left-1/2 text-black justify-center  flex flex-col">
-					<p className="text-xs ">WHO WE ARE</p>
-					<p className="text-6xl font-medium text-primaryDarkText">
+				<article className="sticky p-10 top-1/3 left-1/2 text-black justify-center  flex flex-col">
+					<p className="text-xs">WHO WE ARE</p>
+					<p className="text-2xl md:text-6xl font-medium text-primaryDarkText">
 						Founded in 2000, our company has been a pioneer in sun protection
 						for over a century.
 					</p>
@@ -48,10 +48,10 @@ const About = () => {
 						effective skincare solutions.
 					</p>
 					<p>
-						Inspired by the sea's natural elements and local flora, they crafted
-						nourishing products using only the purest ingredients. Their simple,
-						handcrafted formulas quickly gained a loyal following, passed down
-						through generations.
+						Inspired by the sea&apos;s natural elements and local flora, they
+						crafted nourishing products using only the purest ingredients. Their
+						simple, handcrafted formulas quickly gained a loyal following,
+						passed down through generations.
 					</p>
 					<p>
 						Today, their legacy lives on in a skincare line that blends

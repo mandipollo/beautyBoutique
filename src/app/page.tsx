@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import "./globals.css";
 import Intro from "@/components/home/Intro";
 import Lenis from "lenis";
@@ -8,7 +8,7 @@ import Description from "@/components/home/Description";
 import Products from "@/components/home/Products";
 import About from "@/components/home/About";
 
-const page = () => {
+const HomePage: FC = () => {
 	useEffect(() => {
 		const lenis = new Lenis();
 
@@ -28,4 +28,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default HomePage;

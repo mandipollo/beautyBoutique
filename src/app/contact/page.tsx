@@ -3,13 +3,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import useMousePosition from "../hooks/useMousePosition";
 
-export default function Home() {
-	const [isHovered, setIsHovered] = useState(false);
+export default function ContactPage() {
+	const [isHovered, setIsHovered] = useState<boolean>(false);
 	const { x, y } = useMousePosition();
 	const size = isHovered ? 200 : 40;
 
 	return (
-		<main className="relative w-full h-screen">
+		<main className="relative w-full h-screen ">
 			{x && y && (
 				<motion.div
 					className="absolute flex justify-center items-center  inset-0 bg-[#ec4e39] text-black"
@@ -30,8 +30,8 @@ export default function Home() {
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}
 					>
-						A visual designer - with skills that haven't been replaced by A.I
-						(yet) - making good shit only if the paycheck is equally good.
+						A visual designer - with skills that haven&apos;t been replaced by
+						A.I (yet) - making good shit only if the paycheck is equally good.
 					</p>
 				</motion.div>
 			)}

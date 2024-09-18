@@ -7,7 +7,7 @@ import { ProductProps } from "@/components/cart/DataTypes";
 import Button from "@/components/Button";
 
 import RemoveFromCartButton from "@/components/cart/RemoveFromCartButton";
-import { log } from "console";
+
 import Link from "next/link";
 const CartPage = () => {
 	const cartItems = useAppSelector(state => state.cart.cart) as ProductProps[];
