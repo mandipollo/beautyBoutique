@@ -17,10 +17,8 @@ const Intro = () => {
 	return (
 		<section className=" flex justify-start items-center relative w-screen overflow-hidden">
 			<div className="flex flex-col gap-4 absolute z-10 md:left-20 left-10 md:top-20 top-10 ">
-				<h1 className="md:text-8xl text-4xl">Beauty Boutique.</h1>
-				<p className="flex w-60 ">
-					We offer a full range of skincare products.
-				</p>
+				<h1 className="md:text-8xl text-4xl">Lumishade.</h1>
+				<p className="flex w-60 ">Love your skin!</p>
 				<Link href="/shop">
 					<Button text="EXPLORE PRODUCTS" />
 				</Link>

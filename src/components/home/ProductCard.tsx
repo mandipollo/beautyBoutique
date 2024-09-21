@@ -1,8 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import Button from "../Button";
-import { useAppDispatch } from "@/store/hooks";
-import { filterType } from "@/store/features/shopfilter/shopFilterSlice";
+
 import Link from "next/link";
 const ProductCard: FC<{
 	card: {
@@ -11,10 +10,6 @@ const ProductCard: FC<{
 		image: string;
 	};
 }> = ({ card }) => {
-	const dispatch = useAppDispatch();
-	const handleFilterDispatch = (e: string) => {
-		dispatch(filterType(e));
-	};
 	return (
 		<div
 			key={card.id}
@@ -36,12 +31,8 @@ const ProductCard: FC<{
 					{card.title}
 				</h2>
 
-				<Link
-					onClick={() => handleFilterDispatch(card.title)}
-					href="shop"
-					className="h-full w-full"
-				>
-					<Button text={`SHOP ${card.title}`}></Button>
+				<Link href="shop" className="h-full w-full">
+					<Button text={`SHOP`}></Button>
 				</Link>
 			</div>
 		</div>

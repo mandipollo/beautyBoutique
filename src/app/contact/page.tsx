@@ -30,8 +30,9 @@ export default function ContactPage() {
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}
 					>
-						A visual designer - with skills that haven&apos;t been replaced by
-						A.I (yet) - making good shit only if the paycheck is equally good.
+						Long ago, the four nations lived together in harmony. Then,
+						everything changed when the Fire Nation attacked. Only the Avatar,
+						master of all four elements, could stop them.
 					</p>
 				</motion.div>
 			)}

@@ -6,8 +6,8 @@ import StoreProvider from "@/store/StoreProvider";
 import NavbarWrapper from "@/components/navbar/NavbarWrapper";
 
 export const metadata: Metadata = {
-	title: "Beauty ",
-	description: "Your one stop beauty center!",
+	title: "Lumishade ",
+	description: "Shade for your skin",
 };
 
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {

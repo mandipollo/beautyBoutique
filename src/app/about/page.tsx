@@ -48,10 +48,10 @@ const About = () => {
 						effective skincare solutions.
 					</p>
 					<p>
-						Inspired by the sea&apos;s natural elements and local flora, they
-						crafted nourishing products using only the purest ingredients. Their
-						simple, handcrafted formulas quickly gained a loyal following,
-						passed down through generations.
+						Inspired by the sea natural elements and local flora, they crafted
+						nourishing products using only the purest ingredients. Their simple,
+						handcrafted formulas quickly gained a loyal following, passed down
+						through generations.
 					</p>
 					<p>
 						Today, their legacy lives on in a skincare line that blends

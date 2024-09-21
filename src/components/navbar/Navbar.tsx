@@ -49,7 +49,7 @@ const Navbar = () => {
 
 					<Link href="/">
 						<p className="text-md  underline underline-offset-2 decoration-[#D39032]">
-							Beauty Boutique.
+							Lumishade.
 						</p>
 					</Link>
 				</section>

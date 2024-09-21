@@ -2,12 +2,29 @@
 
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
 
 // slice
 import filterReducer from "./features/shopfilter/shopFilterSlice";
 import cartReducer from "./features/cart/cartSlice";
+import createWebStorage from "redux-persist/es/storage/createWebStorage";
 
+const createNoopStorage = () => {
+	return {
+		getItem() {
+			return Promise.resolve(null);
+		},
+		setItem() {
+			return Promise.resolve();
+		},
+		removeItem() {
+			return Promise.resolve();
+		},
+	};
+};
+const storage =
+	typeof window !== "undefined"
+		? createWebStorage("local")
+		: createNoopStorage(); // fallback for non-browser environments
 const persistConfig = {
 	key: "persist",
 	storage,
